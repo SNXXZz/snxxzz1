@@ -1,0 +1,60 @@
+{
+  "name": "Template",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Name of the Canva template"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of what the template includes"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "free_templates",
+        "pro_templates",
+        "ai",
+        "football_packs",
+        "other"
+      ],
+      "description": "Soccer league or competition category"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in USD"
+    },
+    "preview_image": {
+      "type": "string",
+      "description": "URL of the template preview image"
+    },
+    "template_link": {
+      "type": "string",
+      "description": "Canva template link (shared after payment)"
+    },
+    "cashapp_tag": {
+      "type": "string",
+      "description": "Seller's Cash App $cashtag"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this template is featured"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "sold_out",
+        "draft"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "title",
+    "price",
+    "cashapp_tag"
+  ]
+}
